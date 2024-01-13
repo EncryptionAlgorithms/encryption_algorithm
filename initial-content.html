@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        p, li {
+            color: #6d6d6d;
+        }
+        section {
+            background: white; 
+            margin: 2rem; 
+            padding: 2rem; 
+            border-radius: 10px;
+        }
+        body {
+            background-color: #F5F5FD;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body >
+    <section>
+        <div style="display: flex;">
+            <div>
+                <h1 style="font-size: 3.3rem; color: #DD1313">What is Cryptography?</h1><br />
+                <img src="https://www.logsign.com/uploads/cryptography_2491c51fbc.jpeg" style="padding: 1rem;" width="445px" alt="">
+            </div>
+            <div><br /><br />
+                <p>As the world becomes increasingly digital, the need for security has become ever more imperative. 
+                    That’s where cryptography and its applications to cybersecurity come in.<br /><br />Essentially, the word 
+                    refers to the study of secure communications techniques, but cryptography is closely associated with 
+                    encryption, or the act of scrambling ordinary text into what’s known as ciphertext—and then back again 
+                    into ordinary text (called plaintext) when it arrives at its destination. Several historical figures 
+                    have been credited with creating and using cryptography through the centuries, from Greek historian 
+                    Polybios and French diplomat Blaise de Vigenère to Roman Emperor Julius Caesar—who is credited with 
+                    using one of the first modern ciphers—and Arthur Scherbius, who created the Enigma code-breaking 
+                    machine during World War Two. Likely, none of them would recognize the ciphers of the 21st century. 
+                    But exactly what is cryptography? And, how does it work?</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Cryptography Definition</h1>
+        <br />
+        <p>Cryptography is the technique of obfuscating or coding data, ensuring that only the person who is meant to see the information–and has the key to break the code–can read it. The word is a hybrid of two Greek words: “kryptós”, which means hidden, and “graphein”, which means to write. Literally, the word cryptography translates to hidden writing, but in reality, the practice involves the secure transmission of information.
+
+            <br /><br />The use of cryptography can be traced to the ancient Egyptians and their creative use of hieroglyphics. But, the art of coding has seen great strides over the millennia, and modern cryptography combines advanced computer technology, engineering, and maths—among other disciplines—to create highly sophisticated and secure algorithms and ciphers to protect sensitive data in the digital era.</p>
+    </section>
+    <section>
+        <h1>Why is cryptography important?</h1><br /><br />
+        <p>Cryptography is an essential cybersecurity tool. Its use means that data and users have an additional layer of security that ensures privacy and confidentiality and helps keep data from being stolen by cybercriminals. In practice, cryptography has many applications:</p><br />
+        <ul style="margin: 2rem;">
+            <li>Confidentiality: Only the intended recipient can access and read the information, so conversations and data remain private.</li>
+            <li>Integrity of data: Cryptography ensures that the encoded data cannot be modified or tampered with enroute from the sender to the receiver without leaving traceable marks— an example of this is digital signatures.</li>
+            <li>Authentication: Identities and destinations (or origins) are verified.</li>
+            <li>Non-repudiation: Senders become accountable for their messages since they cannot later deny that the message was transmitted—digital signatures and email tracking are examples of this.</li>
+        </ul>
+    </section>
+    <section><br />
+        <h1>What are the types of cryptography?</h1><br />
+        <p>Cryptography definitions are, understandably, quite broad. This is because the term covers a wide range of different processes. As such, there are many different types of cryptographic algorithms, each one offering varying levels of security, depending on the type of information being transmitted. Below are the three main cryptographic types:</p><br />
+        <ol style="margin: 2rem;">
+            <li>Symmetric Key Cryptography: This simpler form of cryptography takes its name from the fact that both the sender and receiver share one key to encrypt and decrypt information. Some examples of this are the Data Encryption Standard (DES) and Advanced Encryption Standard (AES). The main difficulty here is finding a way to securely share the key between the sender and receiver.</li>
+            <li>Asymmetric Key Cryptography: A more secure type of cryptography, this involves both the sender and receiver having two keys: one public and one private. During the process, the sender will use the receiver’s public key to encrypt the message, while the receiver will use their private key to decrypt it. The two keys are different, and since only the receiver will have the private key, they will be the only ones able to read the information. The RSA algorithm is the most popular form of asymmetric cryptography.</li>
+            <li>Hash Functions: These are types of cryptographic algorithms that do not involve the use of keys. Instead, a hash value—a number of fixed lengths that acts as a unique data identifier—is created based on the length of the plain text information and used to encrypt the data. This is commonly used by various operating systems to protect passwords, for example.</li>
+        </ol><br /><br />
+    </section>
+    
+</body>
+</html>

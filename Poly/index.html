@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyalphabetical Text</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<!-- <style>
+    #vtable{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style> -->    
+<body>
+    
+ 
+    <div class="top-left-text" ><span>Polyalphabetic <span style="color: #DD1313;">Cipher</span></span></div>
+    <div class="head">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="playfair.html">Playfair</a></li>
+            <li><a href="vigenere.html">Vigenere</a></li>
+            
+        </ul>
+    </div>
+    <!-- <nav>
+        <a href="#vtable" id="">vigenere</a>
+    </nav> -->
+
+    <!-- <div class="main-content"> -->
+
+      <div class="center-text">
+        
+        <h1>Vigenere Cipher</h1>
+
+
+        <p>The <span style="color:#DD1313; font-size: 30px; font-family: Arial, sans-serif;"><b>Vigenere Cipher</b></span> is a method of encrypting alphabetic text using a simple form of polyalphabetic substitution. 
+            A key word, typically a short word or phrase, is used to determine the letter substitutions in the text.
+        It provides a stronger encryption compared to simple substitution ciphers.
+    </p>
+    <hr>
+    <br>
+    <br>
+    </div>
+
+    
+    <!-- <div class="vigenere">
+        <h3>Viginere Cipher Table</h3>
+    </div>
+
+    
+    <div class="table">
+        
+    <img class="img" src="images/Vigenere_Table_with_Numbers.png" alt="viginere">
+    <h3>Using the table</h3>
+        <h5>Encryption</h5>
+            <p>Plaintext: S E N D H E L P</p>
+            <p>Key: B U L G E B U L</p>
+            <p>Ciphertext: T Y Y J L F F A </p>
+    
+        
+        <h5>Step by Step</h5>
+        <ol>
+        <li>Get The plaintext's first letter and key's first letter 
+            <ul>
+                <p>The plaintext's first letter is S and the key's first letter is B</p>
+            </ul> </li>
+
+        <li>Refer to the vigenere cipher tabale
+            
+            
+        </li>
+
+        <li>Find the first letter on the vigenere table of the message and key.</li>
+
+        <li>The Plaintext should be on the x-axis and the Key is the y-axis
+            <ul>
+                <p>Refer for the plaintext on the x-axis, and for the key, refer on the y-axis of the vigenere table </p>
+            </ul>
+        </li>
+
+        <li>Find where the plaintext and key intersects
+            <ul>
+                <p>After Plotting the plaintext and the key text on the vigenere table, search where it intesect with each other.
+                     <br>The letter where the plaintext and the keytext intersects is the ciphertext of the encryption</p>
+            </ul>
+        </li>
+
+        </ol>
+
+        <h5>Decryption</h5>
+            <p>Ciphertext: T Y Y J L F F A </p>
+            <p>Key: B U L G E B U L</p>
+            <p>Message: S E N D H E L P</p>
+    </div>
+
+</section> -->
+
+        
+
+
+<!-- 
+    
+<br>
+<br><br><br><br><br><br><br><br><br><br> -->
+  <div class="pt">
+    
+    <label for="message">Enter Message/Plaintext:</label>
+    
+    <textarea id="message" placeholder="Enter your message" style="color: black"></textarea>
+    
+ </div>
+ <div class="key">
+    
+    <label for="key">Enter Key:</label>
+    
+    <textarea id="key" placeholder="Enter key" style="color: black"></textarea>
+</div>
+<div class="res">
+    <label for="key" >Result:</label>
+</div>
+<div class="result">
+    
+    <h4 id="result"></h2> 
+    
+</div>
+<div class="btn">
+    <button onclick="encrypt()" class="btn-encrypt">Encrypt</button>
+    <button onclick="decrypt()" class="btn-decrypt">Decrypt</button>
+
+</div>
+
+<div class="process-section">   
+        <h2 style="margin-bottom: 20px; text-align: center;">computation Process</h2>
+
+       
+        <div class="process">
+            <p id="process"></p>
+           
+          
+        </div>
+    </div>
+
+    
+   
+
+<script>
+
+function encrypt(){
+
+    var message = document.getElementById('message').value.toUpperCase();
+        var key = document.getElementById('key').value.toUpperCase();
+        var result = '';
+        var process = '';
+
+        for (var i = 0; i < message.length; i++) {
+            var charCode = message.charCodeAt(i);
+            var numericalValue = charCode - 65;
+
+            if (charCode >= 65 && charCode <= 90) {
+                var keyIndex = i % key.length;
+                var keyChar = key.charCodeAt(keyIndex) - 65;
+                var encryptedChar = String.fromCharCode(((charCode - 65 + keyChar) % 26) + 65);
+                result += encryptedChar;
+                process += `Char: ${message[i]} (${numericalValue})<br>`;
+                process += `Key: ${key[keyIndex]}<br>`;
+                process += `Formula: (P + K) mod 26 = (${numericalValue} + ${keyChar}) mod 26<br>`;
+                process += `Computation: (${numericalValue} + ${keyChar}) % 26 = ${(numericalValue + keyChar) % 26}<br>`;
+                process += `Encrypted: ${encryptedChar}<br>`;
+                process += `Solution: ${result}<br><br>`;
+            } else {
+                result += message[i];
+                process += `Non-alphabetic character: ${message[i]}<br>`;
+            }
+        }
+
+        document.getElementById('result').innerHTML = 'Encrypted Message: ' + result;
+        document.getElementById('process').innerHTML = 'Encryption Process:<br>' + process;
+    }
+
+
+
+
+function decrypt(){
+
+    var message = document.getElementById('message').value.toUpperCase();
+        var key = document.getElementById('key').value.toUpperCase();
+        var result = '';
+        var process = '';
+
+        for (var i = 0; i < message.length; i++) {
+            var charCode = message.charCodeAt(i);
+            var numericalValue = charCode - 65;
+
+            if (charCode >= 65 && charCode <= 90) {
+                var keyIndex = i % key.length;
+                var keyChar = key.charCodeAt(keyIndex) - 65;
+                var decryptedChar = String.fromCharCode(((charCode - 65 - keyChar + 26) % 26) + 65);
+                result += decryptedChar;
+                process += `Char: ${message[i]} (${numericalValue})<br>`;
+                process += `Key: ${key[keyIndex]}<br>`;
+                process += `Formula: (C - K) mod 26 = (${numericalValue} - ${keyChar}) mod 26<br>`;
+                process += `Computation: (${numericalValue} - ${keyChar} + 26) % 26 = ${(numericalValue - keyChar + 26) % 26}<br>`;
+                process += `Decrypted: ${decryptedChar}<br>`;
+                process += `Solution: ${result}<br><br>`;
+            } else {
+                result += message[i];
+                process += `Non-alphabetic character: ${message[i]}<br><br>`;
+            }
+        }
+
+        document.getElementById('result').innerHTML = 'Decrypted Message: ' + result;
+        document.getElementById('process').innerHTML = 'Decryption Process:<br>' + process;
+    }
+
+    
+
+
+</script>
+</body>
+</html>

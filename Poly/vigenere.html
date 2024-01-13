@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #3f3f3f;
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 100vh; 
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: white; 
+    scroll-behavior: smooth;
+    /* position: relative;
+    width: 100%; */
+    /* margin-bottom: 100px; */
+}
+.navbar{
+    /* background-color: brown; */
+    position: absolute;
+    top: 1%;
+    right: 1rem;
+    /* background-color: brown; */
+    padding: 10px 30px;
+    /* justify-content: space-between; */
+    
+}
+.navbar ul li{
+    display: inline-block;
+    /* padding: 5px 50px; */
+    list-style-type: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid brown;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    background-color: brown;
+    display: inline-block;
+    margin-right: 10px;
+    /* box-shadow: 25px 25px 5px; */
+    
+}
+.navbar ul li a.active{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+/* .navbar ul li a.active:hover{
+    background-color: brown;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+} */
+.navbar ul li a:hover{
+    /* background-color: brown; */
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+
+}
+.vigenere{
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    font-size: 24px;
+    /* font-family: Arial, sans-serif; */
+    text-transform: uppercase;
+
+    
+}
+.img{
+    position: static;
+    
+    margin-top: 200px;
+    margin-left: 240px;
+    margin-right: 240px;
+    padding: 90px 100px 100px 100px;
+    background-color: white;
+    color: black;  
+    text-align:center;  
+    border-radius: 30px;
+    /* box-shadow: 20px 20px 10px 5px  gray ; */
+    /* -webkit-box-shadow: 20px 20px 5px 2px gray;
+    -moz-box-shadow: 20px 20px 5px 2px gray; */
+
+   
+}
+.content{
+    position: absolute;
+    top: 150%;
+    left: 1%;
+}
+.content p{
+    color: yellow;
+}
+table, tr, th{
+ border: 1px solid black;
+ background-color: rgb(244, 238, 238);
+ color: black;
+ 
+ 
+ 
+}
+th{
+    padding: 2px 260px;
+
+    /* margin-left: 20px; */
+}
+table{
+    box-shadow: 10px 10px 10px gray;
+}
+/* ------------- process sa steps------ */
+
+.firstP{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+    
+
+}
+.firstK{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+}
+.firstC{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+}
+</style>
+<body>
+    
+
+
+    <div class="vigenere">
+        Viginere <span style="color: brown;">Cipher</span> Table
+
+       
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a  href="index.html">Home</a></li>
+            <li><a  href="playfair.html">Playfair</a></li>
+            <li><a class="active" href="vigenere.html">Vigenere</a></li>
+        </ul>
+    </div>
+    
+    <div class="img">
+        <span style="font-size: 20px;">y-axis</span>
+        <br>
+        <br>
+        <img src="images/vigeneretable.jpg" alt="viginere">
+        <span style="font-size: 20px;
+        position: absolute;
+        top: 70%;
+        left: 21%;
+        ">x-axis</span>
+    </div>
+    
+    
+    
+    <div class="content">
+        
+    
+    <h3 style="font-size: 20px;">Using the table</h3>
+       
+            <table>
+                <tr>
+                    <th colspan="2" style="font-size: 30px;" >Encryption</th>
+                </tr>
+                <tr>
+                    <th>Plaintext</th>
+                    <th>S E N D H E L P</th>
+                </tr>
+                <tr>
+                    <th>Keyword</th>
+                    <th>B U L G E B U L</th>
+                    
+                </tr>
+                <tr>
+                    <th>Ciphertext</th>
+                    <th>T Y Y J L F F A</th>
+                </tr>
+
+            </table>
+    
+        
+        <h5>Step by Step</h5>
+        <ol>
+        <li>Get The plaintext's first letter and key's first letter 
+            <ul>
+                <p>The plaintext's first letter is <span class="firstP">S</span> and the key's first letter is <span class="firstK">B</span></p>
+            </ul> </li>
+
+        <li>Refer to the vigenere cipher tabale
+            
+            
+        </li>
+
+        <li>Find the first letter on the vigenere table of the message and key.</li>
+
+        <li>The Plaintext should be on the x-axis and the Key is the y-axis
+            <ul>
+                <p>Refer for the plaintext on the x-axis, and for the key, refer on the y-axis of the vigenere table </p>
+                <br>
+                <img style="margin-left: 150px; width: 500px;" src="images/firstStep.jpg" alt="Step 4">
+                <br>
+                <br>
+            </ul>
+
+            
+        </li>
+
+        <li>Find where the plaintext and key intersects
+            <ul>
+                <p>After Plotting the plaintext and the key text on the vigenere table, search where it intesect with each other.
+                     <br>The letter where the plaintext and the keytext intersects is the ciphertext of the encryption</p>
+                     <br>
+                     <img style="margin-left: 150px; width: 400px;" src="images/step5.jpg" alt="Step 5">
+                     <p>The ciphertext where the Keyword and the plaintext intersects is <span class="firstC">T</span> and so on...</p>
+                     
+
+
+            </ul>
+        </li>
+
+        </ol>
+
+        <!-- <h5>Decryption</h5>
+            <p>Ciphertext: T Y Y J L F F A </p>
+            <p>Key: B U L G E B U L</p>
+            <p>Message: S E N D H E L P</p> -->
+        
+            <table style="margin-bottom: 200px; margin-top: 100px;">
+                <tr>
+                    <th colspan="2" style="font-size: 30px;">Decryption</th>
+                </tr>
+                <tr>
+                    <th>Ciphertext</th>
+                    <th>T Y Y J L F F A</th>
+                </tr>
+                
+                <tr>
+                    <th>Keyword</th>
+                    <th>B U L G E B U L</th>
+                    
+                </tr>
+                <tr>
+                    <th>Plaintext</th>
+                    <th>S E N D H E L P</th>
+                </tr>
+
+            </table>
+
+    </div>
+</body>
+</html>
