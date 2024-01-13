@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+a {
+    cursor: pointer;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    margin: 0.2rem;
+}
+
+.side-container {
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.side-container a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.side-container a:hover{
+    background-color: #ffd5d5;
+    color: #DD1313;
+    transition: 0.2s;
+}

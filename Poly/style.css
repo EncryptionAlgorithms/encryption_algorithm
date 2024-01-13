@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #3f3f3f;
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    scroll-behavior: smooth;
+    position: relative;
+    width: 100%;
+    
+}
+/* ------button------- */
+.head{
+    position: absolute;
+    /* background-color: #DD1313; */
+    padding: 10px 30px;
+    top: 1rem;
+    right: 1rem;
+    /* justify-content: space-between; */
+
+    
+}
+.head ul li{
+    display: inline-block;
+    /* padding: 5px 50px; */
+    list-style-type: none;
+   
+
+
+}
+.head ul li a{
+
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid #DD1313;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    background-color: #DD1313;
+    /* display: inline-block; */
+    margin-right: 10px;
+    
+
+}
+.head ul li a:hover{
+    /* background-color: #DD1313; */
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+
+}
+.head ul li a.active{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+/* .head ul li a.active:hover{
+    background-color: #DD1313;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+} */
+
+.top-left-text {
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    font-size: 24px;
+    /* font-family: Arial, sans-serif; */
+    text-transform: uppercase;
+}
+/* .main-content{
+    margin-top: 20px;
+    padding: 20px;
+} */
+.center-text {
+    font-size: 21px;
+    font-family: Arial, sans-serif;
+
+
+   
+    margin-bottom: 200px;
+    text-align: center;
+}
+.center-text h1{
+    text-transform: uppercase;
+    /* margin-right: 40%; */
+  
+}
+.center-text p{
+    font-size: 20px;
+    /* margin-right: 30%; */
+    text-align: center;
+  
+
+
+   
+}
+textarea {
+    width: 100%;
+    height: 80px;
+}
+hr{
+    color: white;
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 3px;
+   
+    position: absolute;
+    left: 30px;
+    
+}
+
+ label{
+   
+    font-size: 20px;
+
+}
+/* textarea{
+  
+    background-color: #ffd3d3;
+    color: white;
+    width: 75%;
+    height: 60px;
+    resize: vertical; 
+    padding: 7px;
+
+} */
+
+.pt{
+    position: absolute;
+    bottom: 40%;
+    left: 2.5%;
+}
+.pt #message{
+    width: 295px;
+    position: absolute;
+    top: 100%;
+    left:0;
+    background-color: #ffd3d3;
+    color: white;
+    resize: vertical; 
+    font-size: 18px;
+
+}
+.key{
+    position: absolute;
+    bottom: 40%;
+    left: 22rem;
+
+}
+.key #key{
+    position: absolute;
+    top: 100%;
+    left: 0rem;
+    width: 250px;
+    background-color: #ffd3d3;
+    color: white;
+    resize: vertical; 
+    font-size: 18px;
+
+}
+.res{
+    position: absolute;
+    /* bottom: 13%; */
+    left: 60%;
+    top: 54%;
+    background: transparent;
+    /* background-color: aliceblue; */
+    /* opacity: .8; */
+    color: white;
+    /* outline: 2px white double; */
+    z-index: 1;
+    padding: 5px;
+    
+   
+}
+
+.result{
+    position: absolute;
+    left: 60%;
+    top: 60%;
+    color: white;
+    z-index: 1;
+    padding: 5px;
+    /* background-color: black; */
+    word-wrap: break-word;
+    /* outline: 2px white double; */
+    width: 500px;
+    
+}
+/* .result #result{
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0%;
+    word-wrap: break-word;
+    width: 500px;
+    font-size: 16px;
+   
+  
+} */
+
+
+.vigenere{
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+
+    /* text-align: left;   */
+}
+
+.table{
+    position: absolute;
+    top: 120%;
+    padding: 0 50px;
+    margin: 0 50px;
+}
+/* .result label{
+    font-size: 30px;
+    color: white;
+    border: none;
+     background: transparent; 
+
+} */
+
+
+.table .img{
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+}
+
+.btn{
+    position: absolute;
+    
+    bottom: 18%;
+    left: 2.5%;
+   
+
+    
+}
+button{
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+
+}
+button:hover{
+    outline: 1px solid white;
+    
+}
+.btn .btn-decrypt{
+  
+    background-color: gray;
+    color: white;
+    
+}
+
+.btn .btn-encrypt{
+   
+    background-color: #DD1313;
+    color: white;
+
+}
+.process-section {
+    /* margin-top: 40px;  */
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    top: 110%;
+    /* left: 20%; */
+    /* bottom: 50%; */
+    background-color: white;
+    color: black;
+    width: 80%;
+    height: 550px;
+    opacity: .9;
+    outline: 8px #DD1313 dotted;
+    /* top: 20px; */
+    text-transform: uppercase;
+
+    
+
+   
+}
+
+
+.process {
+    height: 80%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 300px;
+    
+}
+
+
+
+
+
+
