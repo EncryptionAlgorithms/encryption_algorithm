@@ -8,7 +8,7 @@
 </head>
 <body style="background-color: rgb(192, 192, 192);">
     <!-- <section style="height: 200vh">
-        <iframe src="../EncryptionAlgorithms/DES/index.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../encryption_algorithm/DES/index.html" frameborder="0" width="100%" height="100%"></iframe>
     </section> -->
     <div style="width: 100%; display: flex;">
         <section style="width: 20%; height: 100vh; background: white; position: fixed;">
@@ -38,8 +38,7 @@
                     <h4>Columnar</h4>
                 </a> 
                 <div style="position: absolute; bottom: 1rem; left: 1rem">
-                    <h5 style="font-size: 1rem;">By Niño B. Cartesiano</h5>
-                    <h5 style="font-size: 1rem;">& Roselyn Mae M. Parilla</h5>
+                    <h5 style="font-size: 1rem;">By Niño B. Cartesiano<br />& Roselyn Mae M. Parilla</h5>
                     <p style="font-size: 0.6rem;">BSIT 4A Xamarin | All Rights Reserve 2023-2024</p>
                 </div>
             </div>
@@ -54,7 +53,7 @@
         var style = "background-color: #ffd5d5; color: #DD1313"
         var unStyle = "background-color: white; color: black"
         var output = document.getElementById('output')
-        var srcFile = "../EncryptionAlgorithms/DES/index.html"
+        var srcFile = "../encryption_algorithm/DES/index.html"
         function setback(index) {
             document.getElementById("des").style = index == 1 ? style : unStyle
             document.getElementById("aes").style = index == 2 ? style : unStyle
@@ -67,27 +66,27 @@
             }
 
             if(index == 1) {
-                output.src = "../EncryptionAlgorithms/DES/index.html"
+                output.src = "../encryption_algorithm/DES/index.html"
             }
             
             if(index == 2) {
-                output.src = "../EncryptionAlgorithms/AES/index.html"
+                output.src = "../encryption_algorithm/AES/index.html"
             }
 
             if(index == 3) {
-                output.src = "../EncryptionAlgorithms/RSA/index.html"
+                output.src = "../encryption_algorithm/RSA/index.html"
             }
 
             if(index == 4) {
-                output.src = "../EncryptionAlgorithms/Mono/index.html"
+                output.src = "../encryption_algorithm/Mono/index.html"
             }
 
             if(index == 5) {
-                output.src = "../EncryptionAlgorithms/Poly/index.html"
+                output.src = "../encryption_algorithm/Poly/index.html"
             }
 
             if(index == 6) {
-                output.src = "../EncryptionAlgorithms/Columnar/transpov2.html"
+                output.src = "../encryption_algorithm/Columnar/transpov2.html"
             }
 
         }
